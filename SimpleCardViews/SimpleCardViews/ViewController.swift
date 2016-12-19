@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardTwoView: Card!
     @IBOutlet weak var cardOneView: Card!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    
     var arrayofCardValues = ["1","2","3","4","5","6","7","8","9","10", "J", "Q", "K"]
     var arrayOfImage = [#imageLiteral(resourceName: "snoopyxmas1"),#imageLiteral(resourceName: "snoopyXmas2"),#imageLiteral(resourceName: "snoopyXmas3"),#imageLiteral(resourceName: "snoopyXmas4"),#imageLiteral(resourceName: "snoopyXmas5"),#imageLiteral(resourceName: "snoopyXmas7"),#imageLiteral(resourceName: "snoopyXmas9"),#imageLiteral(resourceName: "snoopyXmas10")]
     
@@ -25,8 +26,6 @@ class ViewController: UIViewController {
         settingUpCardTwo()
         settingUpCardThree()
         setupCardFour()
-
-    
 }
     func settingUpBackground() {
     backgroundImageView.image = #imageLiteral(resourceName: "snoopyBackground")
@@ -58,12 +57,12 @@ class ViewController: UIViewController {
         cardTwoView.cardImage.image = arrayOfImage[randomIndexForImage]
         cardTwoView.leftCardNumberLabel.text = arrayofCardValues[randomCardValue]
         cardTwoView.rightCardNumberLabel.text = cardTwoView.leftCardNumberLabel.text
+        //constraints
         cardTwoView.translatesAutoresizingMaskIntoConstraints = false
         cardTwoView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         cardTwoView.widthAnchor.constraint(equalToConstant: 160).isActive = true
         cardTwoView.leadingAnchor.constraint(equalTo: cardOneView.trailingAnchor,constant: 8).isActive = true
         cardTwoView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
-        cardTwoView.backgroundColor = UIColor.yellow
     }
     
     func settingUpCardThree() {
@@ -71,13 +70,13 @@ class ViewController: UIViewController {
         let randomCardValue = Int(arc4random_uniform(UInt32(arrayofCardValues.count - 1)))
         cardThreeView.cardImage.image = arrayOfImage[randomIndexForImage]
         cardThreeView.leftCardNumberLabel.text = arrayofCardValues[randomCardValue]
+        //constraints
         cardThreeView.rightCardNumberLabel.text = cardThreeView.leftCardNumberLabel.text
         cardThreeView.translatesAutoresizingMaskIntoConstraints = false
         cardThreeView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         cardThreeView.widthAnchor.constraint(equalToConstant: 160).isActive = true
         cardThreeView.topAnchor.constraint(equalTo:cardOneView.bottomAnchor, constant: 8).isActive = true
         cardThreeView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
-        cardThreeView.backgroundColor = UIColor.cyan
     }
     
     func setupCardFour () {
@@ -86,15 +85,12 @@ class ViewController: UIViewController {
         cardFourView.cardImage.image = arrayOfImage[randomIndexForImage]
         cardFourView.leftCardNumberLabel.text = arrayofCardValues[randomCardValue]
         cardFourView.rightCardNumberLabel.text = cardFourView.leftCardNumberLabel.text
+        //constraints 
         cardFourView.translatesAutoresizingMaskIntoConstraints = false
         cardFourView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         cardFourView.widthAnchor.constraint(equalToConstant: 160).isActive = true
         cardFourView.topAnchor.constraint(equalTo:cardTwoView.bottomAnchor, constant: 8).isActive = true
         cardFourView.leadingAnchor.constraint(equalTo: cardThreeView.trailingAnchor,constant: 8).isActive = true
-        
-        cardFourView.backgroundColor = UIColor.darkGray
     }
-    
-
 }
 

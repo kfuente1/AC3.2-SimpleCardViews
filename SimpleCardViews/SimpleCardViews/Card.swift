@@ -9,7 +9,7 @@
 import UIKit
 
 class Card: UIView {
-
+    
     @IBOutlet weak var rightCardNumberLabel: UILabel!
     @IBOutlet weak var leftCardNumberLabel: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
@@ -25,7 +25,4 @@ class Card: UIView {
             view.frame = self.bounds
         }
     }
-
-
-
 }
