@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Card" customModule="SimpleCardViews" customModuleProvider="target">
+            <connections>
+                <outlet property="cardImage" destination="me3-mu-3aY" id="fKz-nr-qNE"/>
+                <outlet property="leftCardNumberLabel" destination="hlx-L5-Am1" id="Nt9-u3-oe9"/>
+                <outlet property="rightCardNumberLabel" destination="Y70-l1-sDI" id="ElP-zy-WS8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y70-l1-sDI">
+                    <rect key="frame" x="269" y="527" width="90" height="90"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="me3-mu-3aY">
+                    <rect key="frame" x="73" y="270" width="228" height="237"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlx-L5-Am1">
+                    <rect key="frame" x="33" y="145" width="90" height="90"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Y70-l1-sDI" firstAttribute="top" secondItem="me3-mu-3aY" secondAttribute="bottom" constant="16" id="0R3-or-olc"/>
+                <constraint firstItem="hlx-L5-Am1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="CRj-A7-Bhe"/>
+                <constraint firstItem="me3-mu-3aY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ET8-JV-NmQ"/>
+                <constraint firstItem="me3-mu-3aY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Igs-7c-Egk"/>
+                <constraint firstAttribute="trailing" secondItem="Y70-l1-sDI" secondAttribute="trailing" constant="8" id="Isy-Y7-HF5"/>
+                <constraint firstItem="hlx-L5-Am1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="M5P-EO-CQt"/>
+                <constraint firstItem="me3-mu-3aY" firstAttribute="top" secondItem="hlx-L5-Am1" secondAttribute="bottom" constant="8" id="MPT-Be-1dd"/>
+                <constraint firstAttribute="trailing" secondItem="me3-mu-3aY" secondAttribute="trailing" constant="8" id="Paf-y6-8F7"/>
+                <constraint firstItem="me3-mu-3aY" firstAttribute="top" secondItem="hlx-L5-Am1" secondAttribute="bottom" constant="8" id="Yhz-BT-Alb"/>
+                <constraint firstItem="me3-mu-3aY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="eTE-M3-qQZ"/>
+                <constraint firstItem="Y70-l1-sDI" firstAttribute="top" secondItem="me3-mu-3aY" secondAttribute="bottom" constant="16" id="hrG-vJ-Dny"/>
+                <constraint firstAttribute="bottom" secondItem="Y70-l1-sDI" secondAttribute="bottom" constant="8" id="yoL-eM-1oB"/>
+            </constraints>
+            <point key="canvasLocation" x="36.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
